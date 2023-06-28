@@ -127,7 +127,7 @@ class EthereumProvider:
 
         base_cost = self.get_base_cost(gas_price=gas_price,
                                        gas_per_pubdata_byte=gas_per_pubdata_byte,
-                                       gas_limit=l2_gas_limit)
+                                       l2_gas_limit=l2_gas_limit)
 
         if token.is_eth():
             value = base_cost + operator_tip + amount
@@ -178,7 +178,7 @@ class EthereumProvider:
 
         base_cost = self.get_base_cost(gas_price=gas_price,
                                        gas_per_pubdata_byte=gas_per_pubdata_byte,
-                                       gas_limit=l2_gas_limit)
+                                       l2_gas_limit=l2_gas_limit)
         value = base_cost + operator_tip + l2_value
         check_base_cost(base_cost, value)
 
