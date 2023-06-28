@@ -74,7 +74,7 @@ class EthereumProvider:
             return self.l1_bridge.l2_token_address(token.l1_address)
 
     def get_base_cost(self,
-                      l2_gas_limit: int,
+                      gas_limit: int,
                       gas_per_pubdata_byte: int = DEPOSIT_GAS_PER_PUBDATA_LIMIT,
                       gas_price: int = None):
         if gas_price is None:
